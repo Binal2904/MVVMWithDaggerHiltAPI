@@ -1,4 +1,4 @@
-package com.demo.advanced.draggerhilt
+package com.demo.advanced.daggerhilt
 
 import org.junit.Test
 
