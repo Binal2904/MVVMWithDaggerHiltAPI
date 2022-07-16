@@ -1,12 +1,16 @@
 package com.demo.advanced.daggerhilt.view.activity
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import com.demo.advanced.daggerhilt.R
+import android.view.LayoutInflater
+import com.demo.advanced.daggerhilt.databinding.ActivityMainBinding
+import com.demo.advanced.daggerhilt.view.base.BaseActivity
 
-class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+class MainActivity : BaseActivity<ActivityMainBinding>() {
+
+    override fun setBinding(layoutInflater: LayoutInflater): ActivityMainBinding {
+        return ActivityMainBinding.inflate(layoutInflater)
+    }
+
+    override fun initView() {
+        mManageToolbar(binding.includeLayToolbar, "MainActivity", false, 0)
     }
 }
