@@ -41,8 +41,24 @@ android {
         disable 'SetTextI18n'
     }
 
-    viewBinding {
-        enabled = true
+    buildFeatures {
+        dataBinding = true
+        viewBinding = true
+    }
+
+    flavorDimensions "version"
+    productFlavors{
+        /*production{
+          applicationId "com.demo.advanced.daggerhilt"
+          dimension = "version"
+          buildConfigField "String","BASE_URL","\"https://www.temp.com\""
+      }*/
+        staging{
+            applicationId "com.demo.advanced.daggerhilt"
+            dimension = "version"
+            buildConfigField "String","BASE_URL","\"https://www.temp.com\""
+        }
+
     }
 
 }
