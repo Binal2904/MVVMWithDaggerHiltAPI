@@ -1,5 +1,6 @@
 package com.demo.advanced.daggerhilt.di.module
 
+import com.demo.advanced.daggerhilt.di.qualifier.BaseApiService
 import com.demo.advanced.daggerhilt.repository.MainRepository
 import com.demo.advanced.daggerhilt.restfullapi.ApiService
 import dagger.Module
@@ -11,8 +12,10 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 class RepositoryModule {
-
     @Provides
     @Singleton
-    fun provideRepositoryModule(apiService: ApiService): MainRepository = MainRepository(apiService)
+    fun provideRepositoryModule(
+        @BaseApiService apiService: ApiService
+    ): MainRepository =
+        MainRepository(apiService)
 }

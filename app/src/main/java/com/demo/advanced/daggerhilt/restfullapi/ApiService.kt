@@ -1,10 +1,13 @@
 package com.demo.advanced.daggerhilt.restfullapi
 
-import retrofit2.http.Body
-import retrofit2.http.POST
+import com.demo.advanced.daggerhilt.data.response.ActivityData
+import com.google.gson.JsonArray
+import org.json.JSONArray
+import retrofit2.Response
+import retrofit2.http.GET
 
 interface ApiService {
 
-    @POST("load_more")
-    suspend fun mGetApiData(@Body string: String):Any
+    @GET("Activities")
+    suspend fun getUsers(): Response<ArrayList<ActivityData>>
 }

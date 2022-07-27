@@ -10,6 +10,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
 import com.demo.advanced.daggerhilt.databinding.LayoutToolbarBinding
+import com.demo.advanced.daggerhilt.interfaces.MoreOptionItemClickListener
 import com.google.android.material.snackbar.Snackbar
 
 abstract class BaseFragment<VB : ViewBinding> : Fragment() {
@@ -43,7 +44,8 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment() {
         binding: LayoutToolbarBinding,
         title: String,
         isShowBackButton: Boolean,
-        isShowMoreButton: Boolean, moreOptionIcon: Int
+        isShowMoreButton: Boolean, moreOptionIcon: Int,
+        moreOptionItemClickListener: MoreOptionItemClickListener?
     ) {
         binding.tvTitle.text = title
         if (isShowBackButton) binding.imgBack.visibility = View.VISIBLE else View.INVISIBLE
@@ -60,8 +62,8 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment() {
                     moreOptionIcon
                 )
             )
-            binding.imgBack.setOnClickListener {
-
+            binding.imgMoreOption.setOnClickListener {
+                moreOptionItemClickListener?.onClick()
             }
         } else
             binding.imgMoreOption.visibility = View.GONE

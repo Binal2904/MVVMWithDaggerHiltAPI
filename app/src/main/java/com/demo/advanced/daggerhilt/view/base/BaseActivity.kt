@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.viewbinding.ViewBinding
 import com.demo.advanced.daggerhilt.databinding.LayoutToolbarBinding
+import com.demo.advanced.daggerhilt.interfaces.MoreOptionItemClickListener
 import com.google.android.material.snackbar.Snackbar
 
 
@@ -63,8 +64,8 @@ abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity() {
         return textView == null || textView.text.toString().isEmpty()
     }
 
-    protected fun messageSnackBar(strTitle: String, view: View) {
-        Snackbar.make(this@BaseActivity, view, strTitle, Snackbar.LENGTH_SHORT).show()
+    protected fun messageSnackBar(message: String, view: View) {
+        Snackbar.make(this@BaseActivity, view, message, Snackbar.LENGTH_SHORT).show()
     }
 
 
@@ -72,7 +73,8 @@ abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity() {
         binding: LayoutToolbarBinding,
         title: String,
         isShowMoreButton: Boolean,
-        moreOptionIcon: Int
+        moreOptionIcon: Int,
+        moreOptionItemClickListener: MoreOptionItemClickListener?
     ) {
         binding.tvTitle.text = title
         binding.imgBack.setOnClickListener {
@@ -86,6 +88,9 @@ abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity() {
                     moreOptionIcon
                 )
             )
+            binding.imgMoreOption.setOnClickListener {
+                moreOptionItemClickListener?.onClick()
+            }
         } else
             binding.imgMoreOption.visibility = View.GONE
     }

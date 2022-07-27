@@ -1,6 +1,8 @@
 package com.demo.advanced.daggerhilt.di.module
 
+import com.demo.advanced.daggerhilt.BuildConfig
 import com.demo.advanced.daggerhilt.di.qualifier.*
+import com.demo.advanced.daggerhilt.restfullapi.ApiService
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import dagger.Module
@@ -23,6 +25,7 @@ class ApiModule {
     @Provides
     fun provideApiUrl(): String = BuildConfig.BASE_URL
 
+
     @Provides
     @Singleton
     @ApiHttpLogger
@@ -32,18 +35,29 @@ class ApiModule {
         return mInterceptor
     }
 
+
     @Provides
     @Singleton
     @ApiHttpClient
     fun provideOkHttpClient(@ApiHttpLogger loggingInterceptor: HttpLoggingInterceptor): OkHttpClient {
-        return OkHttpClient.Builder().readTimeout(100, TimeUnit.MILLISECONDS)
-            .connectTimeout(100, TimeUnit.MILLISECONDS).addInterceptor(loggingInterceptor).build()
+        val mConnectionTimeOut = 7000L
+        return if (BuildConfig.DEBUG)
+            OkHttpClient.Builder().readTimeout(mConnectionTimeOut, TimeUnit.MILLISECONDS)
+                .connectTimeout(mConnectionTimeOut, TimeUnit.MILLISECONDS).addInterceptor(loggingInterceptor)
+                .build()
+        else
+            OkHttpClient.Builder().readTimeout(mConnectionTimeOut, TimeUnit.MILLISECONDS)
+                .connectTimeout(mConnectionTimeOut, TimeUnit.MILLISECONDS)
+                .build()
+
     }
+
 
     @Provides
     @Singleton
     @ApiUrlGson
     fun setGson() = GsonBuilder().setLenient().create()
+
 
     @Provides
     @Singleton
@@ -59,7 +73,9 @@ class ApiModule {
 
     @Provides
     @Singleton
-    @ApiService
-    fun provideApiService(@ApiRetrofit retrofit: Retrofit): com.demo.advanced.daggerhilt.restfullapi.ApiService =
-        retrofit.create(com.demo.advanced.daggerhilt.restfullapi.ApiService::class.java)
+    @BaseApiService
+    fun provideApiService(@ApiRetrofit retrofit: Retrofit): ApiService =
+        retrofit.create(ApiService::class.java)
+
+
 }

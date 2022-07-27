@@ -1,13 +1,12 @@
 package com.demo.advanced.daggerhilt.view.base
 
 
-import android.app.Activity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
-abstract class BaseAdapter<T>(private val context: Activity, private var items: ArrayList<T>) :
+abstract class BaseAdapter<T>(private var items: ArrayList<T>) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     abstract fun onBindData(holder: RecyclerView.ViewHolder?, `val`: T, position: Int)
