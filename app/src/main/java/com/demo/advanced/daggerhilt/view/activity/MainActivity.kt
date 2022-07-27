@@ -27,12 +27,10 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
             when (it.status) {
                 ApiStatus.SUCCESS -> {
                     it.data?.let { user ->
-                        Debugger.logD(user.toString())
                         messageSnackBar("Api call successfully",binding.root)
                     }
                 }
                 ApiStatus.LOADING -> {
-                    Debugger.logD("Loading")
                     messageSnackBar("Loading please wait...",binding.root)
                 }
                 ApiStatus.ERROR -> {
