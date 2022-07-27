@@ -1,0 +1,98 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.demo.advanced.daggerhilt"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->/Users/sanjay/Desktop/Sanjay/Android/Demo/AdvanceDraggerHilt/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="32" />
+9-->/Users/sanjay/Desktop/Sanjay/Android/Demo/AdvanceDraggerHilt/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/Users/sanjay/Desktop/Sanjay/Android/Demo/AdvanceDraggerHilt/app/src/main/AndroidManifest.xml:6:5-67
+11-->/Users/sanjay/Desktop/Sanjay/Android/Demo/AdvanceDraggerHilt/app/src/main/AndroidManifest.xml:6:22-64
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->/Users/sanjay/Desktop/Sanjay/Android/Demo/AdvanceDraggerHilt/app/src/main/AndroidManifest.xml:7:5-79
+12-->/Users/sanjay/Desktop/Sanjay/Android/Demo/AdvanceDraggerHilt/app/src/main/AndroidManifest.xml:7:22-76
+13
+14    <application
+14-->/Users/sanjay/Desktop/Sanjay/Android/Demo/AdvanceDraggerHilt/app/src/main/AndroidManifest.xml:9:5-29:19
+15        android:name="com.demo.advanced.daggerhilt.App"
+15-->/Users/sanjay/Desktop/Sanjay/Android/Demo/AdvanceDraggerHilt/app/src/main/AndroidManifest.xml:10:9-28
+16        android:allowBackup="true"
+16-->/Users/sanjay/Desktop/Sanjay/Android/Demo/AdvanceDraggerHilt/app/src/main/AndroidManifest.xml:11:9-35
+17        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+17-->[androidx.core:core:1.7.0] /Users/sanjay/.gradle/caches/transforms-3/4691802b216344fcf24d3a032973e484/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
+18        android:dataExtractionRules="@xml/data_extraction_rules"
+18-->/Users/sanjay/Desktop/Sanjay/Android/Demo/AdvanceDraggerHilt/app/src/main/AndroidManifest.xml:12:9-65
+19        android:debuggable="true"
+20        android:fullBackupContent="@xml/backup_rules"
+20-->/Users/sanjay/Desktop/Sanjay/Android/Demo/AdvanceDraggerHilt/app/src/main/AndroidManifest.xml:13:9-54
+21        android:icon="@mipmap/ic_launcher"
+21-->/Users/sanjay/Desktop/Sanjay/Android/Demo/AdvanceDraggerHilt/app/src/main/AndroidManifest.xml:14:9-43
+22        android:label="@string/app_name"
+22-->/Users/sanjay/Desktop/Sanjay/Android/Demo/AdvanceDraggerHilt/app/src/main/AndroidManifest.xml:15:9-41
+23        android:roundIcon="@mipmap/ic_launcher_round"
+23-->/Users/sanjay/Desktop/Sanjay/Android/Demo/AdvanceDraggerHilt/app/src/main/AndroidManifest.xml:16:9-54
+24        android:supportsRtl="true"
+24-->/Users/sanjay/Desktop/Sanjay/Android/Demo/AdvanceDraggerHilt/app/src/main/AndroidManifest.xml:17:9-35
+25        android:testOnly="true"
+26        android:theme="@style/Theme.AdvancedDraggerHilt" >
+26-->/Users/sanjay/Desktop/Sanjay/Android/Demo/AdvanceDraggerHilt/app/src/main/AndroidManifest.xml:18:9-57
+27        <activity
+27-->/Users/sanjay/Desktop/Sanjay/Android/Demo/AdvanceDraggerHilt/app/src/main/AndroidManifest.xml:20:9-28:20
+28            android:name="com.demo.advanced.daggerhilt.view.activity.MainActivity"
+28-->/Users/sanjay/Desktop/Sanjay/Android/Demo/AdvanceDraggerHilt/app/src/main/AndroidManifest.xml:21:13-83
+29            android:exported="true" >
+29-->/Users/sanjay/Desktop/Sanjay/Android/Demo/AdvanceDraggerHilt/app/src/main/AndroidManifest.xml:22:13-36
+30            <intent-filter>
+30-->/Users/sanjay/Desktop/Sanjay/Android/Demo/AdvanceDraggerHilt/app/src/main/AndroidManifest.xml:23:13-27:29
+31                <action android:name="android.intent.action.MAIN" />
+31-->/Users/sanjay/Desktop/Sanjay/Android/Demo/AdvanceDraggerHilt/app/src/main/AndroidManifest.xml:24:17-69
+31-->/Users/sanjay/Desktop/Sanjay/Android/Demo/AdvanceDraggerHilt/app/src/main/AndroidManifest.xml:24:25-66
+32
+33                <category android:name="android.intent.category.LAUNCHER" />
+33-->/Users/sanjay/Desktop/Sanjay/Android/Demo/AdvanceDraggerHilt/app/src/main/AndroidManifest.xml:26:17-77
+33-->/Users/sanjay/Desktop/Sanjay/Android/Demo/AdvanceDraggerHilt/app/src/main/AndroidManifest.xml:26:27-74
+34            </intent-filter>
+35        </activity>
+36
+37        <uses-library
+37-->[androidx.window:window:1.0.0] /Users/sanjay/.gradle/caches/transforms-3/6b4d909105f6825405dd545d67c78a66/transformed/window-1.0.0/AndroidManifest.xml:25:9-27:40
+38            android:name="androidx.window.extensions"
+38-->[androidx.window:window:1.0.0] /Users/sanjay/.gradle/caches/transforms-3/6b4d909105f6825405dd545d67c78a66/transformed/window-1.0.0/AndroidManifest.xml:26:13-54
+39            android:required="false" />
+39-->[androidx.window:window:1.0.0] /Users/sanjay/.gradle/caches/transforms-3/6b4d909105f6825405dd545d67c78a66/transformed/window-1.0.0/AndroidManifest.xml:27:13-37
+40        <uses-library
+40-->[androidx.window:window:1.0.0] /Users/sanjay/.gradle/caches/transforms-3/6b4d909105f6825405dd545d67c78a66/transformed/window-1.0.0/AndroidManifest.xml:28:9-30:40
+41            android:name="androidx.window.sidecar"
+41-->[androidx.window:window:1.0.0] /Users/sanjay/.gradle/caches/transforms-3/6b4d909105f6825405dd545d67c78a66/transformed/window-1.0.0/AndroidManifest.xml:29:13-51
+42            android:required="false" />
+42-->[androidx.window:window:1.0.0] /Users/sanjay/.gradle/caches/transforms-3/6b4d909105f6825405dd545d67c78a66/transformed/window-1.0.0/AndroidManifest.xml:30:13-37
+43
+44        <provider
+44-->[androidx.emoji2:emoji2:1.0.0] /Users/sanjay/.gradle/caches/transforms-3/2df552b7308cef89a4a9e83ed510e90d/transformed/emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
+45            android:name="androidx.startup.InitializationProvider"
+45-->[androidx.emoji2:emoji2:1.0.0] /Users/sanjay/.gradle/caches/transforms-3/2df552b7308cef89a4a9e83ed510e90d/transformed/emoji2-1.0.0/AndroidManifest.xml:27:13-67
+46            android:authorities="com.demo.advanced.daggerhilt.androidx-startup"
+46-->[androidx.emoji2:emoji2:1.0.0] /Users/sanjay/.gradle/caches/transforms-3/2df552b7308cef89a4a9e83ed510e90d/transformed/emoji2-1.0.0/AndroidManifest.xml:28:13-68
+47            android:exported="false" >
+47-->[androidx.emoji2:emoji2:1.0.0] /Users/sanjay/.gradle/caches/transforms-3/2df552b7308cef89a4a9e83ed510e90d/transformed/emoji2-1.0.0/AndroidManifest.xml:29:13-37
+48            <meta-data
+48-->[androidx.emoji2:emoji2:1.0.0] /Users/sanjay/.gradle/caches/transforms-3/2df552b7308cef89a4a9e83ed510e90d/transformed/emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
+49                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+49-->[androidx.emoji2:emoji2:1.0.0] /Users/sanjay/.gradle/caches/transforms-3/2df552b7308cef89a4a9e83ed510e90d/transformed/emoji2-1.0.0/AndroidManifest.xml:32:17-75
+50                android:value="androidx.startup" />
+50-->[androidx.emoji2:emoji2:1.0.0] /Users/sanjay/.gradle/caches/transforms-3/2df552b7308cef89a4a9e83ed510e90d/transformed/emoji2-1.0.0/AndroidManifest.xml:33:17-49
+51            <meta-data
+51-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/sanjay/.gradle/caches/transforms-3/278d8bb24d8222ad024baa9446b7a700/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
+52                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+52-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/sanjay/.gradle/caches/transforms-3/278d8bb24d8222ad024baa9446b7a700/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
+53                android:value="androidx.startup" />
+53-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/sanjay/.gradle/caches/transforms-3/278d8bb24d8222ad024baa9446b7a700/transformed/lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
+54        </provider>
+55    </application>
+56
+57</manifest>

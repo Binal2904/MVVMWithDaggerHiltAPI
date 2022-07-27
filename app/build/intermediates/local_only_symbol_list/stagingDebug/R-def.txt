@@ -1,0 +1,37 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color purple_200
+color purple_500
+color purple_700
+color teal_200
+color teal_700
+color white
+drawable button_background
+drawable ic_back
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+font nunito_ans_semi_bold
+font nunito_sans_black
+font nunito_sans_bold
+font nunito_sans_extra_light
+font nunito_sans_regular
+id imgBack
+id imgMoreOption
+id includeLayToolbar
+id tvTitle
+layout activity_main
+layout layout_toolbar
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+string back
+style BaseBoldTextView
+style BaseRegularButton
+style BaseRegularTextView
+style DialogStyle
+style ShapeAppearanceOverlay.App.CornerSize10Percent
+style Theme.AdvancedDraggerHilt
+style Widget.Bloco.ToolbarNavigationButton
+xml backup_rules
+xml data_extraction_rules
