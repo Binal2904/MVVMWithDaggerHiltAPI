@@ -2,24 +2,31 @@ package com.demo.advanced.daggerhilt.view.base
 
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import androidx.viewbinding.ViewBinding
 
-abstract class BaseAdapter<T>(private var items: ArrayList<T>) :
-    RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+abstract class BaseAdapter<T, VB : ViewBinding>(private var items: MutableList<T>) :
+    RecyclerView.Adapter<BaseViewHolder>() {
 
-    abstract fun onBindData(holder: RecyclerView.ViewHolder?, `val`: T, position: Int)
-    abstract fun setItemLayout(): Int
+    abstract fun onBindData(`val`: T)
+    lateinit var binding: VB
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        return ViewHolder(
-            LayoutInflater.from(parent.context).inflate(setItemLayout(), parent, false)
-        )
+    abstract fun setBinding(
+        inflater: LayoutInflater,
+        container: ViewGroup?
+    ): VB
+
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder {
+        val layoutInflater = LayoutInflater.from(parent.context)
+        binding =
+            setBinding(layoutInflater, parent)
+        return BaseViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        onBindData(holder, items[position], position)
+    override fun onBindViewHolder(holder: BaseViewHolder, position: Int) {
+        onBindData(items[position])
     }
 
     override fun getItemCount(): Int {
@@ -30,6 +37,4 @@ abstract class BaseAdapter<T>(private var items: ArrayList<T>) :
         return position
     }
 
-    internal inner class ViewHolder(itemView: View) :
-        RecyclerView.ViewHolder(itemView)
 }
