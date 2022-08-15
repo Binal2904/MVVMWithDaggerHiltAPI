@@ -13,13 +13,19 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c662b061-9cec-4bb0-a99e-d791c26a7220" name="Changes" comment="-Fixed dagger hilt issue&#10;-Change api root&#10;-Show message based on api status" />
+    <list default="true" id="c662b061-9cec-4bb0-a99e-d791c26a7220" name="Changes" comment="rove log">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/demo/advanced/daggerhilt/view/base/BaseViewHolder.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/demo/advanced/daggerhilt/view/base/BaseAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/demo/advanced/daggerhilt/view/base/BaseAdapter.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/Users/sanjay/.android/avd/Pixel_5_API_31.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/Users/sanjay/.android/avd/Pixel_4a_API_31.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -52,6 +58,11 @@
       </list>
     </option>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectId" id="2C7pbGGaT9cXbZl9prLPlU43YYA" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -70,6 +81,8 @@
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
+    <property name="android-custom-view/Users/sanjay/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_RecyclerView_DIMENSIONS" value="1080&#10;1920" />
+    <property name="android-custom-view/Users/sanjay/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED" value="RecyclerView" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
@@ -80,6 +93,7 @@
       <recent name="com.demo.advanced.daggerhilt.di.module" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="com.demo.advanced.daggerhilt.view.base" />
       <recent name="com.demo.advanced.daggerhilt.enum" />
       <recent name="com.demo.advanced.daggerhilt.util" />
     </key>
@@ -173,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658927865816</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="rove log">
+      <created>1658944977796</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1658944977796</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -193,6 +214,7 @@
     <MESSAGE value="Add debugger class&#10;Add base class for fragment activity and adapter&#10;Add common toolbar&#10;Add utility and timeformatter class&#10;Add font&#10;Add style" />
     <MESSAGE value="Add shared preference module&#10;Add module for api calling shared preference module&#10;Add RepositoryModule.kt" />
     <MESSAGE value="-Fixed dagger hilt issue&#10;-Change api root&#10;-Show message based on api status" />
-    <option name="LAST_COMMIT_MESSAGE" value="-Fixed dagger hilt issue&#10;-Change api root&#10;-Show message based on api status" />
+    <MESSAGE value="rove log" />
+    <option name="LAST_COMMIT_MESSAGE" value="rove log" />
   </component>
 </project>
